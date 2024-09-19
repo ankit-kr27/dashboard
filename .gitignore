@@ -18,9 +18,6 @@ dist/
 .vitepress/cache/
 *.local
 
-# Tailwind CSS generated files
-*.css
-
 # Environment variables
 .env
 .env.local
