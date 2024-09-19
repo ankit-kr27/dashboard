@@ -12,7 +12,7 @@ export const getTopProductsData = createAsyncThunk(
     'topProducts/getTopProductsData',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await axiosInstance.get(`${import.meta.env.VITE_SERVER_URL}api/v1/top_products/`);
+            const response = await axiosInstance.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/top_products/`);
             console.log(response);
             return response.data; 
         } catch (error) {

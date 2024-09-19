@@ -16,7 +16,7 @@ export const getFeedbackData = createAsyncThunk(
     async (_, { rejectWithValue }) => {
         try {
             const response = await axiosInstance.get(
-                `${import.meta.env.VITE_REST_API_URL}api/v1/sample_assignment_api_5/`
+                `${import.meta.env.VITE_REST_API_URL}/api/v1/sample_assignment_api_5/`
             );
             return response.data;
         } catch (error) {

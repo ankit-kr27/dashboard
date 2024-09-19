@@ -25,7 +25,7 @@ function SidePanel() {
 
     return (
         <div
-            className={`sticky top-[84px] ${isOpen ? 'w-72' : 'w-20'} z-50 h-[100vh] p-6 pr-0 shadow-md shadow-gray-400 duration-300`}
+            className={`sticky top-0 ${isOpen ? 'w-72' : 'w-20'} z-50 h-[100vh] p-6 pr-0 shadow-md shadow-gray-400 duration-300`}
         >
             <div className="mb-4 ml-4 w-fit">
                 <button className="text-2xl text-primary" onClick={toggleMenu}>

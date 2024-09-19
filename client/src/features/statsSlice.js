@@ -12,7 +12,7 @@ export const getStats = createAsyncThunk(
     'stats/getStats',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await axiosInstance.get(`${import.meta.env.VITE_REST_API_URL}api/v1/sample_assignment_api_1/`);
+            const response = await axiosInstance.get(`${import.meta.env.VITE_REST_API_URL}/api/v1/sample_assignment_api_1/`);
             return response.data;
         } catch (error) {
             return rejectWithValue(error.response?.data?.message || "Failed to fetch stats");

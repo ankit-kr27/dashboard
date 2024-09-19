@@ -11,7 +11,7 @@ export const getSalesData = createAsyncThunk(
     'sales/getSalesData',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await axiosInstance.get(`${import.meta.env.VITE_SERVER_URL}api/v1/sales_data/`);
+            const response = await axiosInstance.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/sales_data/`);
             return response.data;
         } catch (error) {
             return rejectWithValue(
