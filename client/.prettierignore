@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.vite/
+.vitepress/cache/
+.env
+.env.*.local
+package-lock.json
+yarn.lock
+public/
+*.min.js
+*.min.css
+*.log
+.DS_Store
+coverage/
+out/
+*.tmp
+*.cache
