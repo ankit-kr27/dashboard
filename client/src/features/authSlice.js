@@ -4,7 +4,7 @@ import axiosInstance from '../../utils/axios';
 
 const initialState = {
     isLoading: false,
-    isAuthenticated: false,
+    isAuthenticated: true,
     username: '',
     password: '',
     error: null,
@@ -16,7 +16,7 @@ export const loginUser = createAsyncThunk(
     async (formData, { rejectWithValue }) => {
         try {
             const response = await axiosInstance.post(
-                `${import.meta.env.VITE_SERVER_URL}/proxy/api/v1/login`,
+                `${import.meta.env.VITE_REST_API_URL}/api/v1/login`,
                 formData
             );
             console.log(response);

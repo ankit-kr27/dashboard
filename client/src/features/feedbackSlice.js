@@ -4,9 +4,9 @@ import axiosInstance from '../../utils/axios';
 const initialState = {
     isLoading: false,
     feedback: {
+        negative: 0,
         positive: 0,
         neutral: 0,
-        negative: 0,
     },
     error: null,
 };
@@ -16,8 +16,9 @@ export const getFeedbackData = createAsyncThunk(
     async (_, { rejectWithValue }) => {
         try {
             const response = await axiosInstance.get(
-                `${import.meta.env.VITE_SERVER_URL}/proxy/api/v1/sample_assignment_api_5/`
+                `${import.meta.env.VITE_SERVER_URL}/api/v1/feedback_data/`
             );
+            console.log(response.data);
             return response.data;
         } catch (error) {
             return rejectWithValue(

@@ -3,8 +3,7 @@ import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
 import { useState } from 'react';
 import { Tooltip } from '@nextui-org/react';
 import { MdOutlineDashboard } from 'react-icons/md';
-import AccountMenuDropdown from '../account-menu-dropdown/account-menu-dropdown';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 const items = [
     {
@@ -15,7 +14,7 @@ const items = [
 ];
 
 function SidePanel() {
-    const { username } = useSelector(state => state.auth)
+    // const { username } = useSelector(state => state.auth)
 
     const [isOpen, setIsOpen] = useState(true);
 

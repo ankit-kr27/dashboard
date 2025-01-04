@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../features/authSlice';
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,13 @@ const LoginPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const { isLoading, error } = useSelector(state => state.auth);
+    const { isLoading, error, isAuthenticated } = useSelector(state => state.auth);
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate('/dashboard');
+        }
+    }, [navigate, isAuthenticated]);
 
     const handleSubmit = async e => {
         e.preventDefault();

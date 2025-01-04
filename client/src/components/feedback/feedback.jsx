@@ -2,10 +2,15 @@ import { useSelector } from 'react-redux';
 
 const FeedbackSummary = () => {
     const { feedback } = useSelector(state => state.feedback);
-    const total = feedback.negative + feedback.neutral + feedback.positive;
-    const negativePercentage = (feedback.negative / total) * 100;
-    const neutralPercentage = (feedback.neutral / total) * 100;
-    const positivePercentage = (feedback.positive / total) * 100;
+
+    const negative = Number(feedback.negative);
+    const neutral = Number(feedback.neutral);
+    const positive = Number(feedback.positive);
+    
+    const total = negative + neutral + positive;
+    const negativePercentage = (negative / total) * 100;
+    const neutralPercentage = (neutral / total) * 100;
+    const positivePercentage = (positive / total) * 100;
 
     const maxKey = Object.keys(feedback).reduce((a, b) =>
         feedback[a] > feedback[b] ? a : b

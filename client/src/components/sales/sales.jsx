@@ -22,7 +22,7 @@ const Sales = () => {
         <div className="mt-6 px-8">
             <h2 className="mb-4 text-lg font-bold text-gray-700">Comparison</h2>
             <ResponsiveContainer width="100%" height={150}>
-                <LineChart data={salesData} >
+                <LineChart data={salesData} className='-ml-10' width={200}>
                     <XAxis className="" tick={false} />
                     <YAxis className="text-xs" />
                     <Line
